@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "run": "gulp && node dist/js/index.js",
     "test": "node node_modules/karma/bin/karma start karma.conf.js"
   },
   "repository": {
