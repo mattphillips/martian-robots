@@ -1,9 +1,9 @@
-import { Navigator } from '../../lib/js/explorer/Navigator';
-import { Mars } from '../../lib/js/explorer/Mars';
-import { Position } from '../../lib/js/models/Position';
-import { Orientation } from '../../lib/js/models/Orientation';
-import { Instruction } from '../../lib/js/models/Instruction';
-import { Robot } from '../../lib/js/models/Robot';
+import { Navigator } from '../../../lib/js/explorer/Navigator';
+import { Mars } from '../../../lib/js/explorer/Mars';
+import { Position } from '../../../lib/js/models/Position';
+import { Orientation } from '../../../lib/js/models/Orientation';
+import { Instruction } from '../../../lib/js/models/Instruction';
+import { Robot } from '../../../lib/js/models/Robot';
 
 describe("should navigate robots across mars", function() {
 
