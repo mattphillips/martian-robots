@@ -11,16 +11,19 @@ This app is a command line interface that allows the user to define the size of 
  You must have NodeJS installed.
 
 ## Building
-npm has been used to manage the dependencies of the application. To build run:
+npm has been used to manage the dependencies of the application. To install dependecies and build run:
  - `npm install`
 
+If making changes and you just want to build without installing anything then you can run:
+ - `npm run-script build`
+ 
 ## Running
 To run the app use the command below. Then enter the dimensions of Mars, followed by two lines per Robot (First: position on the planet and the orientation. Second: list of instructions).
 Note use the keyword `go` when you have finished entering Robots to make them move.
  - `npm start`
 
 ### Sample Input
- ```
+```
 5 3
 1 1 E
 RFRFRFRF
@@ -31,7 +34,7 @@ FRRFLLFFRRFLL
 0 3 W
 LLFFFLFLFL
 go
- ```
+```
 
 ### Sample Output
 ```

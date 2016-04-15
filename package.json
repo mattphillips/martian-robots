@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node dist/js/index.js",
+    "build": "gulp",
     "postinstall": "gulp",
     "test": "node node_modules/karma/bin/karma start karma.conf.js"
   },
