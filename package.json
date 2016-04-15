@@ -13,6 +13,9 @@
   "author": "Matt Phillips",
   "license": "ISC",
   "homepage": "https://github.com/mattphillips/martian-robots#readme",
+  "dependencies": {
+    "enumify": "^1.0.4"
+  },
   "devDependencies": {
     "babel-es6-polyfill": "^1.0.1",
     "babel-loader": "^6.2.4",
