@@ -1,4 +1,4 @@
-import { Orientation } from "../../../lib/js/models/Orientation";
+import { Orientation } from "../../../app/js/models/Orientation";
 
 describe("Should be able to create an Orientation", function () {
 

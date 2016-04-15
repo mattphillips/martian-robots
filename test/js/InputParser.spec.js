@@ -1,9 +1,9 @@
-import { InputParser } from '../../lib/js/InputParser';
-import { Instruction } from '../../lib/js/models/Instruction';
-import { Mars } from '../../lib/js/explorer/Mars';
-import { Orientation } from '../../lib/js/models/Orientation';
-import { Position } from '../../lib/js/models/Position';
-import { Robot } from '../../lib/js/models/Robot';
+import { InputParser } from '../../app/js/InputParser';
+import { Instruction } from '../../app/js/models/Instruction';
+import { Mars } from '../../app/js/explorer/Mars';
+import { Orientation } from '../../app/js/models/Orientation';
+import { Position } from '../../app/js/models/Position';
+import { Robot } from '../../app/js/models/Robot';
 
 describe("should correctly convert inputs into mars and robots", function () {
 

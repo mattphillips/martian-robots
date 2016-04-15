@@ -1,6 +1,6 @@
-import { Instruction } from '../../../lib/js/models/Instruction';
-import { Orientation } from '../../../lib/js/models/Orientation';
-import { Position } from '../../../lib/js/models/Position';
+import { Instruction } from '../../../app/js/models/Instruction';
+import { Orientation } from '../../../app/js/models/Orientation';
+import { Position } from '../../../app/js/models/Position';
 
 describe("Should be able to create an Instruction and execute it", function () {
 
