@@ -26,11 +26,10 @@ describe("should move robot for a given list of instructions", function () {
         expect(finalPosition).toEqual(new Position(2, 2, Orientation.WEST));
     });
 
-    it("should move robot to fall off the edge of mars and set the position to lost", function () {
+    it("should move robot to fall off the north edge of mars and set the position to lost", function () {
         var robot = new Robot(
             new Position(0, 0, Orientation.NORTH),
             [
-                Instruction.FORWARD,
                 Instruction.FORWARD,
                 Instruction.FORWARD,
                 Instruction.FORWARD,
@@ -42,6 +41,59 @@ describe("should move robot for a given list of instructions", function () {
         var finalPosition = mars.move(robot);
 
         expect(finalPosition).toEqual(new Position(0, 3, Orientation.NORTH, true));
+        expect(finalPosition.isLost()).toBeTruthy();
+    });
+
+    it("should move robot to fall off the south edge of mars and set the position to lost", function () {
+        var robot = new Robot(
+            new Position(0, 0, Orientation.SOUTH),
+            [
+                Instruction.FORWARD,
+                Instruction.FORWARD,
+                Instruction.FORWARD,
+                Instruction.FORWARD
+            ]
+        );
+
+        var mars = new Mars(5, 3);
+        var finalPosition = mars.move(robot);
+
+        expect(finalPosition).toEqual(new Position(0, 0, Orientation.SOUTH, true));
+        expect(finalPosition.isLost()).toBeTruthy();
+    });
+
+    it("should move robot to fall off the east edge of mars and set the position to lost", function () {
+        var robot = new Robot(
+            new Position(3, 0, Orientation.EAST),
+            [
+                Instruction.FORWARD,
+                Instruction.FORWARD,
+                Instruction.FORWARD
+            ]
+        );
+
+        var mars = new Mars(5, 3);
+        var finalPosition = mars.move(robot);
+
+        expect(finalPosition).toEqual(new Position(5, 0, Orientation.EAST, true));
+        expect(finalPosition.isLost()).toBeTruthy();
+    });
+
+    it("should move robot to fall off the west edge of mars and set the position to lost", function () {
+        var robot = new Robot(
+            new Position(3, 0, Orientation.WEST),
+            [
+                Instruction.FORWARD,
+                Instruction.FORWARD,
+                Instruction.FORWARD,
+                Instruction.FORWARD
+            ]
+        );
+
+        var mars = new Mars(5, 3);
+        var finalPosition = mars.move(robot);
+
+        expect(finalPosition).toEqual(new Position(0, 0, Orientation.WEST, true));
         expect(finalPosition.isLost()).toBeTruthy();
     });
 
