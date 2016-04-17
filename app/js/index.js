@@ -25,12 +25,12 @@ rl.on('line', (line) => {
 
         rl.close();
 
-    } else if (isNewLine(line)) {
+    } else if (isNotNewLine(line)) {
         inputs.push(line);
     }
 });
 
-function isNewLine(line) {
+function isNotNewLine(line) {
     return line.replace(/(\r|\n)/g,'') != '';
 }
 
