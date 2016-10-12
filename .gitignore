@@ -1,4 +1,3 @@
 node_modules
-dist/
-.idea/
+bundle.js
 *.log
