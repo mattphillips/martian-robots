@@ -6,8 +6,8 @@ import Orientation from '../../../app/js/models/Orientation';
 import Position from '../../../app/js/models/Position';
 import Robot from '../../../app/js/models/Robot';
 
-describe('should move robot for a given list of instructions', () => {
-  it('should move around mars safely', () => {
+describe('Mars', () => {
+  it('moves robot around mars safely', () => {
     const robot = new Robot(
       new Position(2, 2, Orientation.EAST),
       [
@@ -28,7 +28,7 @@ describe('should move robot for a given list of instructions', () => {
     expect(finalPosition).to.deep.equal(new Position(2, 2, Orientation.WEST));
   });
 
-  it('should move robot to fall off the north edge of mars and set the position to lost', () => {
+  it('moves robot to fall off the north edge of mars and set the position to lost', () => {
     const robot = new Robot(
       new Position(0, 0, Orientation.NORTH),
       [
@@ -46,7 +46,7 @@ describe('should move robot for a given list of instructions', () => {
     expect(finalPosition.isLost()).to.be.true;
   });
 
-  it('should move robot to fall off the south edge of mars and set the position to lost', () => {
+  it('moves robot to fall off the south edge of mars and set the position to lost', () => {
     const robot = new Robot(
       new Position(0, 0, Orientation.SOUTH),
       [
@@ -64,7 +64,7 @@ describe('should move robot for a given list of instructions', () => {
     expect(finalPosition.isLost()).to.be.true;
   });
 
-  it('should move robot to fall off the east edge of mars and set the position to lost', () => {
+  it('moves robot to fall off the east edge of mars and set the position to lost', () => {
     const robot = new Robot(
       new Position(3, 0, Orientation.EAST),
       [
@@ -81,7 +81,7 @@ describe('should move robot for a given list of instructions', () => {
     expect(finalPosition.isLost()).to.be.true;
   });
 
-  it('should move robot to fall off the west edge of mars and set the position to lost', () => {
+  it('moves robot to fall off the west edge of mars and set the position to lost', () => {
     const robot = new Robot(
       new Position(3, 0, Orientation.WEST),
       [
@@ -99,7 +99,7 @@ describe('should move robot for a given list of instructions', () => {
     expect(finalPosition.isLost()).to.be.true;
   });
 
-  it('should move robot to edge with the scent from a lost robot and should skip any moves that will make the robot fall off the edge', () => {
+  it('moves robot to edge with the scent from a lost robot and should skip any moves that will make the robot fall off the edge', () => {
     const instructions = [
       Instruction.FORWARD,
       Instruction.FORWARD,

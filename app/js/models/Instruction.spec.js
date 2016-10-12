@@ -1,15 +1,15 @@
 import { expect } from 'chai';
 
-import Instruction from '../../../app/js/models/Instruction';
-import Orientation from '../../../app/js/models/Orientation';
-import Position from '../../../app/js/models/Position';
+import Instruction from './Instruction';
+import Orientation from './Orientation';
+import Position from './Position';
 
 const buildPosition = orientation => new Position(3, 3, orientation);
 
-describe('Should be able to create an Instruction and execute it', () => {
+describe('Instruction', () => {
 
-  describe('should correctly create an Instruction', () => {
-    it('should create Instruction from string', () => {
+  describe('.fromString', () => {
+    it('returns correct Instruction', () => {
       expect(Instruction.fromString('F')).to.deep.equal(Instruction.FORWARD);
       expect(Instruction.fromString('L')).to.deep.equal(Instruction.LEFT);
       expect(Instruction.fromString('R')).to.deep.equal(Instruction.RIGHT);
@@ -17,8 +17,8 @@ describe('Should be able to create an Instruction and execute it', () => {
     });
   });
 
-  describe('should correctly determine new position when executing an instruction', () => {
-    it('should turn right correctly', () => {
+  describe('.execute', () => {
+    it('returns new position that has turned right', () => {
       const northFacing = buildPosition(Orientation.NORTH);
       const eastFacing = buildPosition(Orientation.EAST);
       const southFacing = buildPosition(Orientation.SOUTH);
@@ -30,7 +30,7 @@ describe('Should be able to create an Instruction and execute it', () => {
       expect(Instruction.execute(westFacing, Instruction.RIGHT).getOrientation()).to.deep.equal(Orientation.NORTH);
     });
 
-    it('should turn left correctly', () => {
+    it('returns new position that has turned left', () => {
       const northFacing = buildPosition(Orientation.NORTH);
       const eastFacing = buildPosition(Orientation.EAST);
       const southFacing = buildPosition(Orientation.SOUTH);
@@ -42,7 +42,7 @@ describe('Should be able to create an Instruction and execute it', () => {
       expect(Instruction.execute(westFacing, Instruction.LEFT).getOrientation()).to.deep.equal(Orientation.SOUTH);
     });
 
-    it('should move forward in the correct direction', () => {
+    it('returns new position that has moved forward', () => {
       const northFacing = buildPosition(Orientation.NORTH);
       const eastFacing = buildPosition(Orientation.EAST);
       const southFacing = buildPosition(Orientation.SOUTH);

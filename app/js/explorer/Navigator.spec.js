@@ -1,15 +1,14 @@
 import { expect } from 'chai';
 
-import Navigator from '../../../app/js/explorer/Navigator';
-import Mars from '../../../app/js/explorer/Mars';
-import Position from '../../../app/js/models/Position';
-import Orientation from '../../../app/js/models/Orientation';
-import Instruction from '../../../app/js/models/Instruction';
-import Robot from '../../../app/js/models/Robot';
+import Navigator from './Navigator';
+import Mars from './Mars';
+import Position from '../models/Position';
+import Orientation from '../models/Orientation';
+import Instruction from '../models/Instruction';
+import Robot from '../models/Robot';
 
-describe('should navigate robots across mars', () => {
-
-  it('should move robots from start to expected finish positions', () => {
+describe('Navigator', () => {
+  it('moves robots from start to expected finish positions', () => {
     const mars = new Mars(5, 3);
     const navigator = new Navigator(mars);
 
