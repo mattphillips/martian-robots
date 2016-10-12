@@ -1,3 +1,5 @@
+import { expect } from 'chai';
+
 import { Navigator } from '../../../app/js/explorer/Navigator';
 import { Mars } from '../../../app/js/explorer/Mars';
 import { Position } from '../../../app/js/models/Position';
@@ -32,10 +34,10 @@ describe("should navigate robots across mars", function() {
 
         var finalPositions = navigator.navigate(robots);
 
-        expect(finalPositions.length).toEqual(3);
-        expect(finalPositions[0]).toEqual(new Position(1,1, Orientation.EAST));
-        expect(finalPositions[1]).toEqual(new Position(3,3, Orientation.NORTH, true));
-        expect(finalPositions[1].isLost()).toBeTruthy();
-        expect(finalPositions[2]).toEqual(new Position(2,3, Orientation.SOUTH));
+        expect(finalPositions.length).to.deep.equal(3);
+        expect(finalPositions[0]).to.deep.equal(new Position(1,1, Orientation.EAST));
+        expect(finalPositions[1]).to.deep.equal(new Position(3,3, Orientation.NORTH, true));
+        expect(finalPositions[1].isLost()).to.be.true;
+        expect(finalPositions[2]).to.deep.equal(new Position(2,3, Orientation.SOUTH));
     });
 });

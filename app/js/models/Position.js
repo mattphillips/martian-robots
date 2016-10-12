@@ -4,7 +4,7 @@ export class Position {
         this.x = x;
         this.y = y;
         this.orientation = orientation;
-        this.lost = lost == 'undefined' ? false : lost;
+        this.lost = lost === undefined ? false : lost;
     }
 
     getX() {
