@@ -1,12 +1,9 @@
-export class Navigator {
+export default class Navigator {
+  constructor(planet) {
+    this.planet = planet;
+  }
 
-    constructor(planet) {
-        this.planet = planet;
-    }
-
-    navigate(robots) {
-        return robots.map(r => {
-            return this.planet.move(r);
-        });
-    }
+  navigate(robots) {
+    return robots.map(r => this.planet.move(r));
+  }
 }
