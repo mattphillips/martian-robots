@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "start": "node bundle.js",
-    "build": "browserify -e app/js/index.js --node -t [ babelify --presets [ es2015 ] ] -o bundle.js",
+    "build": "browserify -e lib/index.js --node -t [ babelify --presets [ es2015 ] ] -o bundle.js",
     "postinstall": "npm run build",
-    "test": "mocha **/*.spec.js --compilers js:babel-register"
+    "test": "mocha ./lib/ --recursive --compilers js:babel-register"
   },
   "repository": {
     "type": "git",
