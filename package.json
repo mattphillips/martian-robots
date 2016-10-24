@@ -16,6 +16,7 @@
   "license": "ISC",
   "homepage": "https://github.com/mattphillips/martian-robots#readme",
   "dependencies": {
+    "browserify": "^13.1.1",
     "enumify": "^1.0.4"
   },
   "devDependencies": {
