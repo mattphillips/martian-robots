@@ -5,7 +5,7 @@ This app is a command line interface that allows the user to define the size of 
 
 ## Language and tools used
  - JavaScript
- - Gulp / Babel / Webpack / Karma / Jasmine / PhantomJS
+ - Babel / Webpack / Mocha / Chai
 
 ## System Requirements
  You must have NodeJS installed.
@@ -15,7 +15,7 @@ npm has been used to manage the dependencies of the application. To install depe
  - `npm install`
 
 If making changes and you just want to build without installing anything then you can run:
- - `npm run-script build`
+ - `npm run build`
  
 ## Running
 To run the app use the command below. Then enter the dimensions of Mars, followed by two lines per Robot (First: position on the planet and the orientation. Second: list of instructions).
